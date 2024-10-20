@@ -14,8 +14,10 @@
     <div
       class="buttonProfile" @click="openMenu1">
     </div>
-      <img v-if="!menu1IsOpen" src="/src/assets/hovedMenu.svg">
-      <img v-if="menu1IsOpen" src="/src/assets/billetMenu.svg">
+      <img v-if="menuHome" src="/src/assets/homeMenu.svg">
+      <img v-if="menuSearch" src="/src/assets/menuSearch.svg">
+      <img v-if="menuTicket" src="/src/assets/billetMenu.svg">
+      <img v-if="menuProfile" src="/src/assets/ticketMenu.svg">
   </div>
   
 </template>
