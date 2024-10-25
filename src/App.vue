@@ -15,13 +15,13 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref } from 'vue'
 
 // hold current menu
-  const activeMenu = ref('home');
+  const activeMenu = ref('home')
 // change menu with buttons
   function changeMenu(menu) {
-    activeMenu.value = menu;
+    activeMenu.value = menu
 }
 </script>
 
