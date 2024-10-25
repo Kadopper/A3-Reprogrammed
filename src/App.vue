@@ -1,27 +1,26 @@
 <template>
   
   <div>
-    <div class="buttonHome" @click="openMenu('home')"></div>
-    <div class="buttonSearch" @click="openMenu('search')"></div>
-    <div class="buttonTicket" @click="openMenu('ticket')"></div>
-    <div class="buttonProfile" @click="openMenu('profile')"></div>
+    <div class="buttonHome" @click="changeMenu('home')"></div>
+    <div class="buttonSearch" @click="changeMenu('search')"></div>
+    <div class="buttonTicket" @click="changeMenu('ticket')"></div>
+    <div class="buttonProfile" @click="changeMenu('profile')"></div>
 
-    <img v-if="activeMenu === 'home'" src="/src/assets/homeMenu.svg">
-    <img v-if="activeMenu === 'search'" src="/src/assets/searchMenu.svg">
-    <img v-if="activeMenu === 'ticket'" src="/src/assets/ticketMenu.svg">
-    <img v-if="activeMenu === 'profile'" src="/src/assets/profileMenu.svg">
+    <img v-if="activeMenu == 'home'" src="/src/assets/homeMenu.svg">
+    <img v-if="activeMenu == 'search'" src="/src/assets/searchMenu.svg">
+    <img v-if="activeMenu == 'ticket'" src="/src/assets/ticketMenu.svg">
+    <img v-if="activeMenu == 'profile'" src="/src/assets/profileMenu.svg">
   </div>
   
 </template>
 
 <script setup>
   import { ref } from 'vue';
-  
-// hold current menu
-  const activeMenu = ref('');
 
-// change menu by using the click input menu function 
-  function openMenu(menu) {
+// hold current menu
+  const activeMenu = ref('home');
+// change menu with buttons
+  function changeMenu(menu) {
     activeMenu.value = menu;
 }
 </script>
